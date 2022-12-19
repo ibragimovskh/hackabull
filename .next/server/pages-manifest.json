@@ -1,0 +1,11 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/api/challenges": "pages/api/challenges.js",
+  "/api/keynotespeakers": "pages/api/keynotespeakers.js",
+  "/api/questions/faq": "pages/api/questions/faq.js",
+  "/api/members": "pages/api/members.js",
+  "/api/sponsor": "pages/api/sponsor.js"
+}
