@@ -156,7 +156,7 @@ export default function Home(props: {
   return (
     <>
       <Head>
-        <title>HackPortal</title> {/* !change */}
+        <title>Hackabull</title> {/* !change */}
         <meta name="description" content="A default HackPortal instance" /> {/* !change */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -179,12 +179,9 @@ export default function Home(props: {
             className="min-w-[280px] w-8/12 h-[240px] flex flex-col justify-center relative md:mb-28 md:min-w-full before:block before:absolute before:bottom-0 before:left-0 before:w-16 before:h-16 before:bg-transparent before:border-b-4 before:border-l-4 before:border-black
           after:block after:absolute after:top-0 after:right-0 after:w-16 after:h-16 after:bg-transparent after:border-t-4 after:border-r-4 after:border-black"
           >
-            <h1 className="text-center md:text-6xl text-3xl md:font-black font-bold">HackPortal</h1>{' '}
+            <h1 className="text-center md:text-6xl text-3xl md:font-black font-bold">Hackabull</h1>{' '}
             {/* !change */}
-            <p className="text-center my-4 md:font-bold md:text-3xl text-xl">
-              {' '}
-              {/* !change */}A Project by ACM Development and HackUTD
-            </p>
+            <p className="text-center my-4 md:font-bold md:text-3xl text-xl"> {/* !change */}</p>
           </div>
           {/* TODO: Programmatically show these based on configured times/organizer preference */}
         </div>
