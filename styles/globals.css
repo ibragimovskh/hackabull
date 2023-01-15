@@ -10,9 +10,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  z-index: 10 !important;
+  background-color: linear-gradient(180deg, rgba(107,127,206,1) 10%, rgba(207,135,192,1) 30%, rgba(236,161,174,1) 53%, rgba(232,196,172,1) 74%, rgba(194,167,206,1) 100%)!important;
 }
 
-body { 
+.bg-gradient { 
   background: linear-gradient(180deg, rgba(107,127,206,1) 10%, rgba(207,135,192,1) 30%, rgba(236,161,174,1) 53%, rgba(232,196,172,1) 74%, rgba(194,167,206,1) 100%)!important;
 
 }
@@ -174,10 +176,13 @@ a.link {
 .header { 
   position: relative;
   border-bottom: 10px #000 solid;
-
+  display: flex;
+  align-items: space-around;  
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 #skyline { 
-  position: absolute;
-  bottom: 0;
+  min-width: 40%!important;
+  min-height: 100%!important;
 }

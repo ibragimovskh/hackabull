@@ -171,7 +171,7 @@ export default function Home(props: {
         </div>
       )}
       {/* Hero section */}
-      <section className="min-h-screen p-4 bg-hero-pattern header bg-gradient">
+      <section className="min-h-screen bg-hero-pattern header">
         <div
           style={{ minHeight: 480 }}
           className="max-w-4xl mx-auto flex flex-col justify-center items-center"
@@ -203,10 +203,16 @@ export default function Home(props: {
         </div>
         {/* scroller */}
         <div className="mouse"></div>
-        <Image src={'/assets/tampa_skyline.png'} id="skyline" height="50vh" width={100} />
+        <Image
+          src={'/assets/tampa_skyline.png'}
+          id="skyline"
+          height="100%"
+          width="1000px"
+          quality={100}
+        />
       </section>
       {/* Video Space */}
-      <section className="z-0 relative md:h-[560px] py-[3rem] bg-white">
+      <section className="z-0 relative md:h-[560px] py-[3rem] ">
         <div className="flex flex-col justify-center items-center md:flex-row">
           {/* Video */}
           {/* !change */}
@@ -214,7 +220,7 @@ export default function Home(props: {
             className="video"
             width="700"
             height="400"
-            src="https://www.youtube.com/embed/niFBblrblqo"
+            src="https://www.youtube.com/embed/LjnZkeWtti4"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -242,7 +248,7 @@ export default function Home(props: {
         <div className="md:text-base text-sm">
           HackPortal is a platform for user-friendly hackathon event management. <br />
           <br />A few of its features include: A fully customizable front end, sign in with email/
-          Google, hacker registration, images, challenges, sponsors, FAQ and more fetched from
+          Google, hacker registration, ages, challenges, sponsors, FAQ and more fetched from
           backend, push notifications, a spotlight carousel highlighting ongoing events, QR code
           check in and swag claims, report submission/ Ask a question, a built-in and easy to set up
           schedule, Hacker, Admin, and Super Admin roles, an Admin console to send announcements,
@@ -370,7 +376,7 @@ export default function Home(props: {
       {/* Sponsors */}
       {sponsor.length != 0 && (
         <section>
-          <div className="flex flex-col flex-grow bg-white">
+          <div className="flex flex-col flex-grow ">
             <h4 className="font-bold p-6 md:text-4xl text-2xl my-4">Sponsors</h4>
             {/* Sponsor Card */}
             <section className="flex flex-wrap justify-center p-4">
