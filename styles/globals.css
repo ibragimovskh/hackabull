@@ -185,3 +185,15 @@ a.link {
   min-width: 40%!important;
   min-height: 100%!important;
 }
+
+.video-section { 
+  position: relative !important;
+}
+
+#bull { 
+  min-width: 15%!important;
+  min-height: 100%!important; 
+  position: absolute!important;
+  bottom: 0!important; 
+  right: 0!important;
+} 

@@ -213,10 +213,10 @@ export default function Home(props: {
       </section>
       {/* Video Space */}
       <section className="z-0 relative md:h-[560px] py-[3rem] ">
-        <div className="flex flex-col justify-center items-center md:flex-row">
+        <div className="flex flex-col justify-between items-center md:flex-row video-section p-12">
           {/* Video */}
           {/* !change */}
-          <iframe
+          {/* <iframe
             className="video"
             width="700"
             height="400"
@@ -225,28 +225,36 @@ export default function Home(props: {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          ></iframe>
+          ></iframe> */}
+          <Image src={'/assets/pirate_bull.png'} height="500px" width="500px" quality={100} />
           {/* Stats */}
           <div className="">
             {stats.map((stat, index) => (
               <div
                 key={stat.data}
-                className={`${
-                  index % 2 === 0 ? 'lg:ml-40 md:ml-20 ml-14' : 'md:mr-8 mr-24'
-                } text-center md:my-6 my-4`}
+                // className={`${
+                //   index % 2 === 0 ? 'lg:ml-40 md:ml-20 ml-14' : 'md:mr-8 mr-24'
+                // } text-center md:my-6 my-4`}
               >
-                <p className="font-bold text-2xl text-indigo-600 lg:text-5xl">{stat.data}</p>
-                <p className="font-medium text-lg lg:text-3xl">{stat.object}</p>
+                <p className="text-2xl text-red-600 font-black lg:text-5xl">{stat.data}</p>
+                <p className="font-medium text-lg lg:text-3xl pb-6">{stat.object}</p>
               </div>
             ))}
           </div>
+          {/* <Image
+          src={'/assets/bull.png'}
+          id="bull"
+          height="100%"
+          width="1000px"
+          quality={100}
+        /> */}
         </div>
       </section>
       {/* About section */}
       <section className="md:p-12 p-6">
-        <h1 className="md:text-4xl text-2xl font-bold my-4">About HackPortal</h1> {/* !change */}
+        <h1 className="md:text-4xl text-2xl font-bold my-4">About HackaBull</h1> {/* !change */}
         <div className="md:text-base text-sm">
-          HackPortal is a platform for user-friendly hackathon event management. <br />
+          HackaBull is a platform for user-friendly hackathon event management. <br />
           <br />A few of its features include: A fully customizable front end, sign in with email/
           Google, hacker registration, ages, challenges, sponsors, FAQ and more fetched from
           backend, push notifications, a spotlight carousel highlighting ongoing events, QR code
@@ -254,7 +262,7 @@ export default function Home(props: {
           schedule, Hacker, Admin, and Super Admin roles, an Admin console to send announcements,
           update user roles, show number of check-ins, swag claims, and more!. <br />
           <br />
-          To set up HackPortal for your hackathon, check out the{' '}
+          To set up HackaBull for your hackathon, check out the{' '}
           <a
             href="https://github.com/acmutd/hackportal/blob/develop/docs/set-up.md"
             className="underline"

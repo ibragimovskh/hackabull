@@ -12,15 +12,15 @@ export const navItems = [
 
 export const stats = [
   {
-    data: 'Big',
-    object: 'statistic 1',
+    data: 'Big.',
+    object: 'Participate in the largest hackathon of Tampa!',
   },
   {
-    data: 'Shocking',
-    object: 'statistic 2',
+    data: 'Strong.',
+    object: 'Learn new skills or become stronger in those you already have!',
   },
   {
-    data: 'Incredible',
-    object: 'statistic 3',
+    data: 'Bull.',
+    object: 'Chase the win as bull chases the flag!',
   },
 ];

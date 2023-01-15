@@ -4,6 +4,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        'red-pigment': '#FFC312',
+      },
       fontFamily: {
         sans: ['wavehaus'],
       },
