@@ -15,6 +15,7 @@ import FAQ from '../components/faq';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import Image from 'next/image';
 
 /**
  * The home page.
@@ -170,7 +171,7 @@ export default function Home(props: {
         </div>
       )}
       {/* Hero section */}
-      <section className="min-h-screen p-4 bg-contain bg-hero-pattern">
+      <section className="min-h-screen p-4 bg-hero-pattern header bg-gradient">
         <div
           style={{ minHeight: 480 }}
           className="max-w-4xl mx-auto flex flex-col justify-center items-center"
@@ -179,14 +180,18 @@ export default function Home(props: {
             className="min-w-[280px] w-8/12 h-[240px] flex flex-col justify-center relative md:mb-28 md:min-w-full before:block before:absolute before:bottom-0 before:left-0 before:w-16 before:h-16 before:bg-transparent before:border-b-4 before:border-l-4 before:border-black
           after:block after:absolute after:top-0 after:right-0 after:w-16 after:h-16 after:bg-transparent after:border-t-4 after:border-r-4 after:border-black"
           >
-            <h1 className="text-center md:text-6xl text-3xl md:font-black font-bold">Hackabull</h1>{' '}
+            <h1 className="text-center md:text-6xl text-3xl md:font-black font-bold">HackaBull</h1>{' '}
             {/* !change */}
-            <p className="text-center my-4 md:font-bold md:text-3xl text-xl"> {/* !change */}</p>
+            <p className="text-center my-4 md:font-bold md:text-3xl text-xl">
+              {' '}
+              Tampa’s Largest Hackathon for Students
+              {/* !change */}
+            </p>
           </div>
           {/* TODO: Programmatically show these based on configured times/organizer preference */}
         </div>
         <div className="flex flex-col items-center md:flex-row md:justify-around px-4 md:space-y-0 space-y-3 > * + *">
-          {buttonDatas.map((button) => (
+          {/* {buttonDatas.map((button) => (
             <button
               key={button.text}
               onClick={() => router.push(button.path)}
@@ -194,8 +199,11 @@ export default function Home(props: {
             >
               {button.text}
             </button>
-          ))}
+          ))} */}
         </div>
+        {/* scroller */}
+        <div className="mouse"></div>
+        <Image src={'/assets/tampa_skyline.png'} id="skyline" height="50vh" width={100} />
       </section>
       {/* Video Space */}
       <section className="z-0 relative md:h-[560px] py-[3rem] bg-white">
@@ -335,7 +343,7 @@ export default function Home(props: {
       {members.length != 0 && (
         <section>
           {/* Team Members */}
-          <div className="flex flex-col flex-grow bg-white">
+          <div className="flex flex-col flex-grow ">
             <div className="my-2">
               <h4 className="font-bold p-6 md:text-4xl text-2xl my-4">Meet Our Team :)</h4>{' '}
               {/* !change */}
@@ -393,17 +401,17 @@ export default function Home(props: {
         <div className="my-2 relative">
           {/* Social icons */} {/* !change */}
           <div className="space-x-4 > * + *">
-            <a href="https://twitter.com/hackutd" rel="noopener noreferrer" target="_blank">
+            <a href="https://twitter.com/hackabull" rel="noopener noreferrer" target="_blank">
               <TwitterIcon className="footerIcon" />
             </a>
             <a
-              href="https://www.instagram.com/hackutd/?hl=en"
+              href="https://www.instagram.com/hackabull/?hl=en"
               rel="noopener noreferrer"
               target="_blank"
             >
               <InstagramIcon className="footerIcon" />
             </a>
-            <a href="https://www.facebook.com/hackutd/" rel="noopener noreferrer" target="_blank">
+            <a href="https://www.facebook.com/hackabull/" rel="noopener noreferrer" target="_blank">
               <FacebookIcon className="footerIcon" />
             </a>
           </div>
@@ -411,14 +419,13 @@ export default function Home(props: {
           <div className="absolute bottom-0 right-0">
             {' '}
             {/* !change */}
-            Checkout HackUTD&apos;s{' '}
             <a
               href="https://acmutd.co/"
               rel="noopener noreferrer"
               target="_blank"
               className="font-black hover:underline"
             >
-              organizer site
+              {/* organizer site */}
             </a>
           </div>
         </div>
