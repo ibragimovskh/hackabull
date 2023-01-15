@@ -171,7 +171,7 @@ export default function Home(props: {
         </div>
       )}
       {/* Hero section */}
-      <section className="min-h-screen bg-hero-pattern header">
+      <section className="min-h-screen header">
         <div
           style={{ minHeight: 480 }}
           className="max-w-4xl mx-auto flex flex-col justify-center items-center"
@@ -402,7 +402,7 @@ export default function Home(props: {
       )}
 
       {/* Footer */}
-      <section className="bg-gray-100 mt-16 px-6 py-8 md:text-base text-xs">
+      <section className="mt-16 px-6 py-8 md:text-base text-xs">
         {/* Upper Content */}
         <div className="my-2 relative">
           {/* Social icons */} {/* !change */}

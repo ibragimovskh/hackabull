@@ -96,7 +96,7 @@ export default function Dashboard(props: {
 
         <Sidebar />
 
-        <section id="mainContent" className="lg:w-7/8 md:w-6/7 w-full px-6 py-3 bg-white">
+        <section id="mainContent" className="lg:w-7/8 md:w-6/7 w-full px-6 py-3">
           <DashboardHeader />
           {/* Spotlight & Announcements */}
           <div className="flex flex-wrap my-16">
