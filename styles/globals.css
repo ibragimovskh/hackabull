@@ -176,14 +176,15 @@ a.link {
   position: relative;
   border-bottom: 10px #000 solid;
   display: flex;
-  align-items: space-around;  
-  justify-content: space-between;
+  /* align-items: space-around;   */
+  /* justify-content: space-between; */
   flex-direction: column;
 }
 
 #skyline { 
-  min-width: 40%!important;
-  min-height: 100%!important;
+  min-width: 100%!important;
+  min-height: 100%!important; 
+  /* opacity: .8; */
 }
 
 .video-section { 
@@ -197,3 +198,5 @@ a.link {
   bottom: 0!important; 
   right: 0!important;
 } 
+
+

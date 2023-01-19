@@ -171,7 +171,7 @@ export default function Home(props: {
         </div>
       )}
       {/* Hero section */}
-      <section className="min-h-screen header">
+      <section className="header">
         <div
           style={{ minHeight: 480 }}
           className="max-w-4xl mx-auto flex flex-col justify-center items-center"
@@ -202,14 +202,13 @@ export default function Home(props: {
           ))} */}
         </div>
         {/* scroller */}
-        <div className="mouse"></div>
-        <Image
-          src={'/assets/tampa_skyline.png'}
+        {/* <Image
+          src={'/assets/skylinepng.svg'}
           id="skyline"
           height="100%"
           width="1000px"
           quality={100}
-        />
+        /> */}
       </section>
       {/* Video Space */}
       <section className="z-0 relative md:h-[560px] py-[3rem] ">
@@ -395,7 +394,7 @@ export default function Home(props: {
             <h2 className="my-2 text-center">
               {' '}
               {/* !change */}
-              If you would like to sponsor HackPortal, please reach out to us at&nbsp;
+              If you would like to sponsor Hackabull, please reach out to us at&nbsp;
               <a
                 href="mailto:email@organization.com"
                 rel="noopener noreferrer"
@@ -465,7 +464,7 @@ export default function Home(props: {
             </a>
             {/* !change */}
             <a
-              href="https://github.com/acmutd/hackportal"
+              href="https://github.com/gulphater/hackabull"
               target="_blank"
               rel="noreferrer"
               className="hover:underline font-thin whitespace-nowrap"
