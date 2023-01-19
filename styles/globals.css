@@ -182,7 +182,7 @@ a.link {
 }
 
 #skyline { 
-  min-width: 100%!important;
+  min-width: 50%!important;
   min-height: 100%!important; 
   /* opacity: .8; */
 }
@@ -200,3 +200,6 @@ a.link {
 } 
 
 
+.random-class { 
+  display: none;
+}

@@ -202,13 +202,13 @@ export default function Home(props: {
           ))} */}
         </div>
         {/* scroller */}
-        {/* <Image
-          src={'/assets/skylinepng.svg'}
+        <Image
+          src={'/assets/tampa_skyline.png'}
           id="skyline"
           height="100%"
           width="1000px"
           quality={100}
-        /> */}
+        />
       </section>
       {/* Video Space */}
       <section className="z-0 relative md:h-[560px] py-[3rem] ">
