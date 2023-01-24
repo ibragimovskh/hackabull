@@ -234,13 +234,6 @@ export default function Home(props: {
               </div>
             ))}
           </div>
-          {/* <Image
-          src={'/assets/bull.png'}
-          id="bull"
-          height="100%"
-          width="1000px"
-          quality={100}
-        /> */}
         </div>
       </section>
       {/* About section */}
