@@ -12,15 +12,15 @@ export const navItems = [
 
 export const stats = [
   {
-    data: 'Big.',
-    object: 'Participate in the largest hackathon of Tampa!',
+    data: 'Creativity.',
+    object: 'Unleash your inner pirate at HackaBull!',
   },
   {
-    data: 'Strong.',
-    object: 'Learn new skills or become stronger in those you already have!',
+    data: 'Collaboration.',
+    object: 'Join the crew and hack the future at HackaBull.',
   },
   {
-    data: 'Bull.',
-    object: 'Chase the win as bull chases the flag!',
+    data: 'Innovation.',
+    object: 'HackaBull - where innovation meets adventure.',
   },
 ];
