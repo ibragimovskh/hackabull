@@ -182,7 +182,7 @@ a.link {
 }
 
 #skyline { 
-  min-width: 70%!important;
+min-width: 70%!important;
   min-height: 100%!important; 
   z-index: 1;
   /* opacity: .8; */

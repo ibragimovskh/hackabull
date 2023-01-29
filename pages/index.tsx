@@ -242,11 +242,11 @@ export default function Home(props: {
         <div className="md:text-base text-sm">
           HackaBull is a platform for user-friendly hackathon event management. <br />
           <br />A few of its features include: A fully customizable front end, sign in with email/
-          Google, hacker registration, ages, challenges, sponsors, FAQ and more fetched from
+          Google, hacker I changed this word, ages, challenges, sponsors, FAQ and more fetched from
           backend, push notifications, a spotlight carousel highlighting ongoing events, QR code
           check in and swag claims, report submission/ Ask a question, a built-in and easy to set up
           schedule, Hacker, Admin, and Super Admin roles, an Admin console to send announcements,
-          update user roles, show number of check-ins, swag claims, and more!. <br />
+          update user roles, as number of check-ins, swag claims, and more!. <br />
           <br />
           To set up HackaBull for your hackathon, check out the{' '}
           <a
