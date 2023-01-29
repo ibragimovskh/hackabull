@@ -219,7 +219,13 @@ export default function Home(props: {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe> */}
-          <Image src={'/assets/pirate_bull.png'} height="500px" width="500px" quality={100} />
+          <Image
+            src={'/assets/pirate_bull.png'}
+            height="500px"
+            width="500px"
+            quality={100}
+            alt="bull"
+          />
           {/* Stats */}
           <div className="">
             {stats.map((stat, index) => (
@@ -240,22 +246,18 @@ export default function Home(props: {
       <section className="md:p-12 p-6">
         <h1 className="md:text-4xl text-2xl font-bold my-4">About HackaBull</h1> {/* !change */}
         <div className="md:text-base text-sm">
-          HackaBull is a platform for user-friendly hackathon event management. <br />
-          <br />A few of its features include: A fully customizable front end, sign in with email/
-          Google, hacker I changed this word, ages, challenges, sponsors, FAQ and more fetched from
-          backend, push notifications, a spotlight carousel highlighting ongoing events, QR code
-          check in and swag claims, report submission/ Ask a question, a built-in and easy to set up
-          schedule, Hacker, Admin, and Super Admin roles, an Admin console to send announcements,
-          update user roles, as number of check-ins, swag claims, and more!. <br />
+          Welcome to HackaBull, the University of South Florida&apos;s premier hackathon! Join us on
+          March 24, 2023 for a 36-hour marathon of coding, creativity, and innovation.
           <br />
-          To set up HackaBull for your hackathon, check out the{' '}
-          <a
-            href="https://github.com/acmutd/hackportal/blob/develop/docs/set-up.md"
-            className="underline"
-          >
-            HackPortal Github
-          </a>
-          !
+          <br />
+          Whether you&apos;re a seasoned hacker or new to the scene, HackaBull is open to all
+          students with no previous experience required. From workshops and challenges to prizes and
+          a career fair, there&apos;s something for everyone at this exciting event.
+          <br /> <br />
+          Founded in 2017, HackaBull is the biggest hackathon for students in Tampa and offers a
+          unique opportunity to learn from industry professionals, network with peers, and showcase
+          your skills. And best of all, registration is completely free! Food and merchandise will
+          also be provided, so you can stay fueled throughout the event.
         </div>
       </section>
       {/* Featuring Keynotes speakers */}
