@@ -201,9 +201,11 @@ export default function Home(props: {
             </button>
           ))} */}
         </div>
-        {/* scroller */}
         <Image src={'/assets/something.png'} id="skyline" height="100%" width="1000px" />
+
+        {/* scroller */}
       </section>
+
       {/* Video Space */}
       <section className="z-0 relative md:h-[560px] py-[3rem] ">
         <div className="flex flex-col justify-between items-center md:flex-row video-section p-12">
