@@ -48,6 +48,16 @@ export const hackPortalConfig: HackPortalConfig = {
             pattern: '[0-9]+',
             initialValue: null,
           },
+          {
+            question: 'Phone Number',
+            required: true,
+            id: 'phoneNumber',
+            name: 'phoneNumber',
+            min: '1',
+            max: '100',
+            pattern: '[0-9]+',
+            initialValue: null,
+          },
         ],
       },
       {
@@ -173,24 +183,48 @@ export const hackPortalConfig: HackPortalConfig = {
             initialValue: '',
             options: [
               {
-                title: 'Freshman',
-                value: 'freshman',
+                title: 'Less than Secondary / High School',
+                value: 'middleSchool',
               },
               {
-                title: 'Sophomore',
+                title: 'Secondary / High School',
+                value: 'highSchool',
+              },
+              {
+                title: 'Undergraduate University (2 year - community college or similar)',
                 value: 'sophomore',
               },
               {
-                title: 'Junior',
-                value: 'junior',
-              },
-              {
-                title: 'Senior',
+                title: 'Undergraduate University (3+ year)',
                 value: 'senior',
               },
               {
-                title: 'Graduate Student',
+                title: 'Graduate University (Masters, Professional, Doctoral, etc)',
                 value: 'grad',
+              },
+              {
+                title: 'Code School / Bootcamp',
+                value: 'bootcamp',
+              },
+              {
+                title: 'Other Vocational / Trade Program or Apprenticeship',
+                value: 'vocational',
+              },
+              {
+                title: 'Post Doctorate',
+                value: 'phd',
+              },
+              {
+                title: 'Other',
+                value: 'other',
+              },
+              {
+                title: "I'm not currently a student ",
+                value: 'notStudent',
+              },
+              {
+                title: 'Prefer not to answer',
+                value: 'noAnswer',
               },
             ],
           },
