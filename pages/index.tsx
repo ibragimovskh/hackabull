@@ -212,7 +212,7 @@ export default function Home(props: {
                 className="font-header font-bold bg-transparent rounded-full border-2 border-black text-xl mr-auto ml-auto mt-2 px-8 py-1"
                 onClick={toggleDialog}
               >
-                {!user || !isSignedIn ? 'Sign in' : hasProfile ? 'Profile' : 'Register'}
+                {!user || !isSignedIn ? 'Sign in' : hasProfile ? 'Profile' : 'Sign in'}
               </button>
             </div>
             {showProfileDialog && <ProfileDialog onDismiss={dismissDialog} />}
