@@ -242,14 +242,14 @@ export default function AuthPage() {
                       </button>
                     </div>
                   )} */}
-                <div className="text-center text-gray-500 text-xl">or</div>
-                <button
+                {/* <div className="text-center text-gray-500 text-xl">or</div> */}
+                {/* <button
                   className="px-4 py-2 w-full rounded-md shadow-md bg-white my-4 text-lg font-bold hover:shadow-lg hover:bg-gray-100 text-left flex items-center"
                   onClick={() => signInWithGoogle()}
                 >
                   <Image src={GoogleIcon} alt="GoogleIcon" width={25} height={25} />
                   <p className="mx-2">Sign in with Google</p>
-                </button>
+                </button> */}
               </React.Fragment>
             ) : (
               <React.Fragment>
@@ -338,9 +338,9 @@ export default function AuthPage() {
             <div className="text-center">{errorMsg}</div>
           </section>
         </div>
-        <div className="flex xl:w-1/2 w-full items-center xl:justify-center lg:justify-start justify-center">
+        {/* <div className="flex xl:w-1/2 w-full items-center xl:justify-center lg:justify-start justify-center">
           <Image alt="login image" src={LoginImage} width={500} height={600}></Image>
-        </div>
+        </div> */}
       </section>
     </>
   );

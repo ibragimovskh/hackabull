@@ -17,12 +17,18 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import Image from 'next/image';
 
+// for registration button
+import ProfileDialog from '../components/ProfileDialog';
+import { useAuthContext } from '../lib/user/AuthContext';
+import { useUser } from '../lib/profile/user-data';
+
 /**
  * The home page.
  *
  * Landing: /
  *
  */
+
 export default function Home(props: {
   keynoteSpeakers: KeynoteSpeaker[];
   challenges: Challenge[];
@@ -32,7 +38,6 @@ export default function Home(props: {
 }) {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
-
   const [speakers, setSpeakers] = useState<KeynoteSpeaker[]>([]);
   const [challenges, setChallenges] = useState<Challenge[]>([]);
   const [challengeIdx, setChallengeIdx] = useState(0);
@@ -46,6 +51,19 @@ export default function Home(props: {
   });
 
   const [notif, setNotif] = useState(false);
+
+  // FOR REGISTRATION BUTTON
+  const [showProfileDialog, setShowProfileDialog] = useState(false);
+
+  const toggleDialog = () => {
+    setShowProfileDialog(!showProfileDialog);
+  };
+
+  const { isSignedIn, hasProfile, profile } = useAuthContext();
+  const user = useUser();
+  const dismissDialog = () => {
+    setShowProfileDialog(false);
+  };
 
   const colorSchemes: ColorScheme[] = [
     {
@@ -176,17 +194,28 @@ export default function Home(props: {
           style={{ minHeight: 480 }}
           className="max-w-4xl mx-auto flex flex-col justify-center items-center"
         >
-          <div
-            className="min-w-[280px] w-8/12 h-[240px] flex flex-col justify-center relative md:mb-28 md:min-w-full before:block before:absolute before:bottom-0 before:left-0 before:w-16 before:h-16 before:bg-transparent before:border-b-4 before:border-l-4 before:border-black
-          after:block after:absolute after:top-0 after:right-0 after:w-16 after:h-16 after:bg-transparent after:border-t-4 after:border-r-4 after:border-black"
-          >
+          <div className="min-w-[280px] w-8/12 h-[240px] flex flex-col justify-center relative md:mb-28 md:min-w-full before:block before:absolute ">
             <h1 className="text-center md:text-6xl text-3xl md:font-black font-bold">HackaBull</h1>{' '}
             {/* !change */}
             <p className="text-center my-4 md:font-bold md:text-3xl text-xl">
               {' '}
-              Tampa’s Largest Hackathon for Students
+              March 25-26, 2023
               {/* !change */}
             </p>
+            <p className="text-center my-4 md:font-bold md:text-3xl text-xl">
+              {' '}
+              University of South Florida
+              {/* !change */}
+            </p>
+            <div className="flex lg:mr-8">
+              <button
+                className="font-header font-bold bg-transparent rounded-full border-2 border-black text-xl mr-auto ml-auto mt-2 px-8 py-1"
+                onClick={toggleDialog}
+              >
+                {!user || !isSignedIn ? 'Sign in' : hasProfile ? 'Profile' : 'Register'}
+              </button>
+            </div>
+            {showProfileDialog && <ProfileDialog onDismiss={dismissDialog} />}
           </div>
           {/* TODO: Programmatically show these based on configured times/organizer preference */}
         </div>
