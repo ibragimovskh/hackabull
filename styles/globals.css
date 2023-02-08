@@ -176,12 +176,32 @@ a.link {
   position: relative;
   border-bottom: 10px #000 solid;
   display: flex;
-  align-items: space-around;  
-  justify-content: space-between;
+  /* align-items: space-around;   */
+  /* justify-content: space-between; */
   flex-direction: column;
 }
 
 #skyline { 
-  min-width: 40%!important;
-  min-height: 100%!important;
+  min-width: 100%!important;
+  min-height: 35vh!important;
+  z-index: 1;
+  position:static !important;
+  /* opacity: .8; */
+}
+
+.video-section { 
+  position: relative !important;
+}
+
+#bull { 
+  min-width: 15%!important;
+  min-height: 100%!important; 
+  position: absolute!important;
+  bottom: 0!important; 
+  right: 0!important;
+} 
+
+
+.random-class { 
+  display: none;
 }

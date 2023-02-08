@@ -17,12 +17,18 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import Image from 'next/image';
 
+// for registration button
+import ProfileDialog from '../components/ProfileDialog';
+import { useAuthContext } from '../lib/user/AuthContext';
+import { useUser } from '../lib/profile/user-data';
+
 /**
  * The home page.
  *
  * Landing: /
  *
  */
+
 export default function Home(props: {
   keynoteSpeakers: KeynoteSpeaker[];
   challenges: Challenge[];
@@ -32,7 +38,6 @@ export default function Home(props: {
 }) {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
-
   const [speakers, setSpeakers] = useState<KeynoteSpeaker[]>([]);
   const [challenges, setChallenges] = useState<Challenge[]>([]);
   const [challengeIdx, setChallengeIdx] = useState(0);
@@ -46,6 +51,19 @@ export default function Home(props: {
   });
 
   const [notif, setNotif] = useState(false);
+
+  // FOR REGISTRATION BUTTON
+  const [showProfileDialog, setShowProfileDialog] = useState(false);
+
+  const toggleDialog = () => {
+    setShowProfileDialog(!showProfileDialog);
+  };
+
+  const { isSignedIn, hasProfile, profile } = useAuthContext();
+  const user = useUser();
+  const dismissDialog = () => {
+    setShowProfileDialog(false);
+  };
 
   const colorSchemes: ColorScheme[] = [
     {
@@ -171,22 +189,33 @@ export default function Home(props: {
         </div>
       )}
       {/* Hero section */}
-      <section className="min-h-screen header">
+      <section className="header">
         <div
           style={{ minHeight: 480 }}
           className="max-w-4xl mx-auto flex flex-col justify-center items-center"
         >
-          <div
-            className="min-w-[280px] w-8/12 h-[240px] flex flex-col justify-center relative md:mb-28 md:min-w-full before:block before:absolute before:bottom-0 before:left-0 before:w-16 before:h-16 before:bg-transparent before:border-b-4 before:border-l-4 before:border-black
-          after:block after:absolute after:top-0 after:right-0 after:w-16 after:h-16 after:bg-transparent after:border-t-4 after:border-r-4 after:border-black"
-          >
+          <div className="min-w-[280px] w-8/12 h-[240px] flex flex-col justify-center relative md:mb-28 md:min-w-full before:block before:absolute ">
             <h1 className="text-center md:text-6xl text-3xl md:font-black font-bold">HackaBull</h1>{' '}
             {/* !change */}
             <p className="text-center my-4 md:font-bold md:text-3xl text-xl">
               {' '}
-              Tampa’s Largest Hackathon for Students
+              March 25-26, 2023
               {/* !change */}
             </p>
+            <p className="text-center my-4 md:font-bold md:text-3xl text-xl">
+              {' '}
+              University of South Florida
+              {/* !change */}
+            </p>
+            <div className="flex lg:mr-8">
+              <button
+                className="font-header font-bold bg-transparent rounded-full border-2 border-black text-xl mr-auto ml-auto mt-2 px-8 py-1"
+                onClick={toggleDialog}
+              >
+                {!user || !isSignedIn ? 'Sign in' : hasProfile ? 'Profile' : 'Sign in'}
+              </button>
+            </div>
+            {showProfileDialog && <ProfileDialog onDismiss={dismissDialog} />}
           </div>
           {/* TODO: Programmatically show these based on configured times/organizer preference */}
         </div>
@@ -201,22 +230,17 @@ export default function Home(props: {
             </button>
           ))} */}
         </div>
+        <Image src={'/assets/something.png'} id="skyline" height="100%" width="1000px" />
+
         {/* scroller */}
-        <div className="mouse"></div>
-        <Image
-          src={'/assets/tampa_skyline.png'}
-          id="skyline"
-          height="100%"
-          width="1000px"
-          quality={100}
-        />
       </section>
+
       {/* Video Space */}
       <section className="z-0 relative md:h-[560px] py-[3rem] ">
-        <div className="flex flex-col justify-center items-center md:flex-row">
+        <div className="flex flex-col justify-between items-center md:flex-row video-section p-12">
           {/* Video */}
           {/* !change */}
-          <iframe
+          {/* <iframe
             className="video"
             width="700"
             height="400"
@@ -225,18 +249,25 @@ export default function Home(props: {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          ></iframe>
+          ></iframe> */}
+          <Image
+            src={'/assets/pirate_bull.png'}
+            height="500px"
+            width="500px"
+            quality={100}
+            alt="bull"
+          />
           {/* Stats */}
           <div className="">
             {stats.map((stat, index) => (
               <div
                 key={stat.data}
-                className={`${
-                  index % 2 === 0 ? 'lg:ml-40 md:ml-20 ml-14' : 'md:mr-8 mr-24'
-                } text-center md:my-6 my-4`}
+                // className={`${
+                //   index % 2 === 0 ? 'lg:ml-40 md:ml-20 ml-14' : 'md:mr-8 mr-24'
+                // } text-center md:my-6 my-4`}
               >
-                <p className="font-bold text-2xl text-indigo-600 lg:text-5xl">{stat.data}</p>
-                <p className="font-medium text-lg lg:text-3xl">{stat.object}</p>
+                <p className="text-2xl text-red-600 font-black lg:text-5xl">{stat.data}</p>
+                <p className="font-medium text-lg lg:text-3xl pb-6">{stat.object}</p>
               </div>
             ))}
           </div>
@@ -244,24 +275,20 @@ export default function Home(props: {
       </section>
       {/* About section */}
       <section className="md:p-12 p-6">
-        <h1 className="md:text-4xl text-2xl font-bold my-4">About HackPortal</h1> {/* !change */}
+        <h1 className="md:text-4xl text-2xl font-bold my-4">About HackaBull</h1> {/* !change */}
         <div className="md:text-base text-sm">
-          HackPortal is a platform for user-friendly hackathon event management. <br />
-          <br />A few of its features include: A fully customizable front end, sign in with email/
-          Google, hacker registration, ages, challenges, sponsors, FAQ and more fetched from
-          backend, push notifications, a spotlight carousel highlighting ongoing events, QR code
-          check in and swag claims, report submission/ Ask a question, a built-in and easy to set up
-          schedule, Hacker, Admin, and Super Admin roles, an Admin console to send announcements,
-          update user roles, show number of check-ins, swag claims, and more!. <br />
+          Welcome to HackaBull, the University of South Florida&apos;s premier hackathon! Join us on
+          March 24, 2023 for a 36-hour marathon of coding, creativity, and innovation.
           <br />
-          To set up HackPortal for your hackathon, check out the{' '}
-          <a
-            href="https://github.com/acmutd/hackportal/blob/develop/docs/set-up.md"
-            className="underline"
-          >
-            HackPortal Github
-          </a>
-          !
+          <br />
+          Whether you&apos;re a seasoned hacker or new to the scene, HackaBull is open to all
+          students with no previous experience required. From workshops and challenges to prizes and
+          a career fair, there&apos;s something for everyone at this exciting event.
+          <br /> <br />
+          Founded in 2017, HackaBull is the biggest hackathon for students in Tampa and offers a
+          unique opportunity to learn from industry professionals, network with peers, and showcase
+          your skills. And best of all, registration is completely free! Food and merchandise will
+          also be provided, so you can stay fueled throughout the event.
         </div>
       </section>
       {/* Featuring Keynotes speakers */}
@@ -387,7 +414,7 @@ export default function Home(props: {
             <h2 className="my-2 text-center">
               {' '}
               {/* !change */}
-              If you would like to sponsor HackPortal, please reach out to us at&nbsp;
+              If you would like to sponsor Hackabull, please reach out to us at&nbsp;
               <a
                 href="mailto:email@organization.com"
                 rel="noopener noreferrer"
@@ -457,7 +484,7 @@ export default function Home(props: {
             </a>
             {/* !change */}
             <a
-              href="https://github.com/acmutd/hackportal"
+              href="https://github.com/gulphater/hackabull"
               target="_blank"
               rel="noreferrer"
               className="hover:underline font-thin whitespace-nowrap"

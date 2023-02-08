@@ -12,15 +12,15 @@ export const navItems = [
 
 export const stats = [
   {
-    data: 'Big',
-    object: 'statistic 1',
+    data: 'Creativity.',
+    object: 'Unleash your inner pirate at HackaBull!',
   },
   {
-    data: 'Shocking',
-    object: 'statistic 2',
+    data: 'Collaboration.',
+    object: 'Join the crew and hack the future at HackaBull.',
   },
   {
-    data: 'Incredible',
-    object: 'statistic 3',
+    data: 'Innovation.',
+    object: 'HackaBull - where innovation meets adventure.',
   },
 ];
